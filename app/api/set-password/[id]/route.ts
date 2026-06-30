@@ -76,19 +76,18 @@ export async function GET(
 
       console.log("Origin :: ", origin);
 
-      return new NextResponse(
-        `
-  <script>
-    window.history.replaceState({ email: "${email}", vendorId: "${id}" }, "", "/verification");
-    window.location.href = "/verification";
-  </script>
-  `,
-        { headers: { "Content-Type": "text/html" } },
-      );
+       return NextResponse.json(
+      { success: true, email: email},
+      { status: 200 },
+    );
+    } else if (data.code == 3930) {
+      return NextResponse.json(
+      { success: false, error: "You are not authorized person to access this page"},
+      { status: 200 })
     }
 
     return NextResponse.json(
-      { success: false, error: "Something went wrong" },
+      { success: false, error: "Please contact with application onwer." },
       { status: 500 },
     );
   } catch (error) {

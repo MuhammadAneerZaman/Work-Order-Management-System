@@ -13,5 +13,6 @@ export const Config = {
     report: "All_Vendors",
   },
   zohoHeaderKey: "Zoho-oauthtoken",
-  frontendUrl:process.env.BASE_URL
+  frontendUrl:process.env.BASE_URL,
+  jwtSecret:process.env.JWT_SECRET
 };

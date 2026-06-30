@@ -35,6 +35,10 @@ export async function setZohoToken() {
     throw new Error("Failed upstream token authority refresh");
   }
   const data = await response.json();
+
+  console.log("Token Response Data :: ", data);
+  
+
   await redis.set(cacheKey, data.access_token, { ex: data.expires_in });
 
   return data.access_token;
