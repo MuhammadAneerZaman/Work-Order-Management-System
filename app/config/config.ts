@@ -14,5 +14,9 @@ export const Config = {
   },
   zohoHeaderKey: "Zoho-oauthtoken",
   frontendUrl:process.env.BASE_URL,
-  jwtSecret:process.env.JWT_SECRET
+  jwtSecret:process.env.JWT_SECRET,
+  client:{
+    form:"Clients",
+    report:"Clients_Report"
+  }
 };

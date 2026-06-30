@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
-export default function PasswordForm({ vendorId, email }: { vendorId: string, email: string }) {
+export default function PasswordForm({ id, email, type }: { id: string, email: string, type: string }) {
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
