@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import React, { useState } from "react";
 
-const LoginVendorForm = () => {
+const LoginClientForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -15,7 +15,7 @@ const LoginVendorForm = () => {
   return (
     <Card className="w-[350px]">
       <CardHeader>
-        <CardTitle> Vendor Portal Login </CardTitle>
+        <CardTitle> Client Portal Login </CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleLogin} className="space-y-4">
@@ -41,4 +41,4 @@ const LoginVendorForm = () => {
   );
 };
 
-export default LoginVendorForm;
+export default LoginClientForm;
